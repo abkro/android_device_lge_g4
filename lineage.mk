@@ -16,8 +16,11 @@
 DEBUG_ME += lineage.mk
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)                                                        
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)                                                
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)                                                
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+                                                
+$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2560
@@ -26,8 +29,8 @@ TARGET_SCREEN_WIDTH := 1440
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from the common Open Source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
